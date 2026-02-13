@@ -1,0 +1,188 @@
+:root {
+  color-scheme: light;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #101728;
+  background: radial-gradient(circle at top right, #e9f0ff, #f8f9fd 50%, #eef7f4);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 1px solid #c5d3f5;
+  background: #ffffff;
+  color: #1f335f;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f0f4ff;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid #dce3f6;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+.sidebar-header {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.sidebar-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.sidebar-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hint {
+  color: #4b5d86;
+  font-size: 0.9rem;
+}
+
+.notes-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.note-item {
+  border: 1px solid #dce3f6;
+  border-radius: 10px;
+  padding: 0.5rem;
+  background: #fff;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.note-item.active {
+  border-color: #7da2ff;
+  box-shadow: 0 0 0 2px rgba(125, 162, 255, 0.2);
+}
+
+.note-select {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.note-select span {
+  color: #4b5d86;
+  font-size: 0.82rem;
+}
+
+.danger {
+  border-color: #f6c2c2;
+  color: #7a1f1f;
+}
+
+.main-panel {
+  padding: 1rem;
+}
+
+.empty-state {
+  border: 2px dashed #c5d3f5;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  color: #4b5d86;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr auto;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.meta-row input {
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #c5d3f5;
+  border-radius: 8px;
+}
+
+.split-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.panel {
+  border: 1px solid #dce3f6;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.88);
+  min-height: 70dvh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.panel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 60dvh;
+  border: 1px solid #d6dff7;
+  border-radius: 8px;
+  padding: 0.7rem;
+  resize: vertical;
+}
+
+.preview {
+  overflow: auto;
+}
+
+@media (max-width: 960px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .main-panel {
+    border-top: 1px solid #dce3f6;
+  }
+
+  .meta-row {
+    grid-template-columns: 1fr;
+  }
+
+  .split-view {
+    grid-template-columns: 1fr;
+  }
+}
