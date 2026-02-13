@@ -5,11 +5,6 @@
 ## Pitch
 Nova Notes is a lightweight OSS markdown notes app focused on speed and reliability: write in markdown, preview instantly, organize with tags, and keep everything local.
 
-## Screenshots
-- `docs/screenshots/editor-preview.png` (placeholder)
-- `docs/screenshots/notes-list.png` (placeholder)
-- `docs/screenshots/import-export.png` (placeholder)
-
 ## Features (OSS)
 - Split view markdown editor + preview
 - Notes list with title and `updatedAt`
